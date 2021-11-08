@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=divice-with, initial-scale=1.0">
+
+<title>夏威夷旅遊導覽服務網站-關於我們</title>
+<meta name="description"  
+content="我們提供夏威夷旅遊租借服務,例如:衝浪板 車子 帳篷等等..." />
+<meta name="robots" content="index, follow" />
+
+<!--字體設定-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+
+<!--連結css-->
+<link rel="stylesheet" href="./style2.css" />
+
+<!--icon-->
+<link rel="shortcut icon" href="./Pictures/hawaii.png" />
+
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"> <img src="./Pictures/van.png" alt="Logo">
+        <h1>關於我們</h1>
+        </div>
+
+        <nav>
+           <ul>
+            <li><a href="./index.html">首頁</a></li>
+            <li><a href="./about.html">關於我們</a></li>
+            <li><a href="./index_login.html">會員登入</a></li>
+            <li><a href="#">聯絡我們</a></li>
+           </ul>
+        </nav>
+
+    </header>
+
+
+
+    <!-- <main> -->
+        <section class="Thebackimage">
+            <div>
+                <img id="test"  src="./Pictures2/b1.jpg" style="width: 100%;  height: 100%;" alt="pure css3 slider" />
+            </div>
+        </section>
+    <!-- </main> -->
+
+
+
+    <!--最下面黑框-->
+     <footer>
+        <div class="logo"> <img src="./Icons/black logo.svg" 
+            alt="Logo"  />
+            <h1>夏威夷旅遊租借服務</h1> 
+
+        </div>
+        <nav>
+             <ul>
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">About</a></li>
+                 <li><a href="#">Login</a></li>
+                 <li><a href="#">Contact</a></li>
+             </ul>
+          </nav>
+    
+          <section class="links">
+            <a href="#"><img src="./Icons/facebook.svg" alt="facebook" /></a>
+            <a href="#"><img src="./Icons/instagram.svg" alt="instagram"/></a>
+            <a href="#"><img src="./Icons/twitter.svg" alt="twitter"/></a>
+            <a href="#"><img src="./Icons/youtube.svg" alt="youtube"/></a>
+          
+        </section>
+     </footer>
+</body>
+<script src="./app.js"></script>
+
+<script>
+    var imgArray = [
+    './Pictures2/b1.jpg',
+    './Pictures2/b2.jpg',
+    './Pictures2/b3.jpg',
+    './Pictures2/b4.jpg',
+    './Pictures2/b5.jpg',    
+],
+    curIndex = 0;
+    imgDuration = 3000;
+ 
+    function slideShow() {
+
+        setTimeout(function() {
+        document.getElementById('test').src = imgArray[curIndex];
+    },1000);
+    curIndex++;
+    if (curIndex == imgArray.length) { curIndex = 0; }
+    setTimeout(slideShow, imgDuration); 
+    }
+
+    slideShow();
+</script>
+</html>
